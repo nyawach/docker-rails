@@ -51,10 +51,10 @@ production:
 docker-compose build
 ```
 
-RailsのDB設定
+Railsのセットアップ
 
 ```
-docker-compose run web bin/rails db:setup
+docker-compose run web bin/setup
 ```
 
 バックグウンドでコンテナを作成+起動
