@@ -6,6 +6,7 @@ services:
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - .:/app
+      - bundle:/usr/local/bundle
     ports:
       - 3000:3000
     depends_on:
@@ -25,3 +26,6 @@ services:
       - "3306:3306"
 volumes:
   db-volume:
+    driver: local
+  bundle:
+    driver: local
